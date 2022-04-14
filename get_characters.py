@@ -18,8 +18,8 @@ def get_characters():
   try:
     r = rq.get('https://gateway.marvel.com:443/v1/public/characters', params=params) 
   except Exception as e:
-    print(f'Error: {e}')
+    return False, e
   else:
-    print(r.json())
+    return r.json()
 
 get_characters()
