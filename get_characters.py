@@ -3,8 +3,8 @@ from hashlib import md5
 import requests as rq
 
 def get_characters():
-  public_key = 'the public key you generated'
-  private_key = 'the private key you generated'
+  public_key = '9935fbeb4789c8a714bb88719d010dd8'
+  private_key = '8afaf1ca9920b71dc97bf4cf3415e4c907ea20cd'
   ts = str(time.time())  
   hash_str = md5(f"{ts}{private_key}{public_key}".encode("utf8")).hexdigest()
   
